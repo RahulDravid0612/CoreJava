@@ -14,9 +14,12 @@ public class Question2 {
         System.out.println("Enter the number to check even or odd");
         int num=sc.nextInt();
 
-        switch (num)
+        switch (num/2)
         {
-            case num/2:
+            case 0:
+                System.out.println("Given number is Even");
+            default:
+                System.out.println("Given number is Odd");
         }
 
     }
