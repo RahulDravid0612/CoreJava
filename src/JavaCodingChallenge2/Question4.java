@@ -10,16 +10,17 @@ package JavaCodingChallenge2;
 
 public class Question4 {
     public static void main(String[] args) {
-        int num1 =1;
+        int num1 =2;
         int num2 = 10;
         while (num1 <= num2) {
             if (num1 % 2 != 0) {
                 System.out.print(num1);
             }
-            if (num1 %2 == 0 && num1 != num2) {
+            if (num1+1 != num2 && num1 % 2 != 0) {
                 System.out.print(", ");
             }
             num1++;
+
         }
     }
 }
