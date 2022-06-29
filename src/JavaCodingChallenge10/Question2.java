@@ -6,7 +6,7 @@
 package JavaCodingChallenge10;
 
 import java.util.Arrays;
-public class Question2 {
+ public class Question2 {
     public static void main(String[] args) {
         int[] arr={8, 1000, -10, 76, 276};
         System.out.println(" Before sorting..");
