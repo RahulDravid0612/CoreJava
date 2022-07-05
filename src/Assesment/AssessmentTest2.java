@@ -12,12 +12,10 @@ public class AssessmentTest2 {
 
         for (int i = 0; i < tokens.length; i++)
         {
-
             if (Character.isDigit(tokens[i]))
             {
                 values.push(Integer.parseInt(String.valueOf(tokens[i])));
             }
-
             else if (tokens[i] == '(')
                 ops.push(tokens[i]);
 
@@ -69,11 +67,10 @@ public class AssessmentTest2 {
         return 0;
     }
 
-    // Driver method to test above methods
     public static void main(String[] args)
     {
         System.out.println(AssessmentTest2.
-                evaluate("(5*4)+(3+7)/4"));
+                evaluate("(5*4)+(3+7)"));
 
     }
 }

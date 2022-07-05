@@ -10,21 +10,15 @@ public class AssessmentTest {
     public static int evaluate(String str) {
 
         char[] bucket = str.toCharArray();
-        String specialCharacter = "(*+-/)";
+        String specialCharacter = "*+-/";
         Stack<Integer> num = new Stack<>();
         Stack<Character> c = new Stack<>();
         for (int i = 0; i < bucket.length; i++) {
             if (Character.isDigit(bucket[i])) {
                 num.push(Integer.parseInt(String.valueOf((bucket[i]))));
-            } else if (specialCharacter.contains(Character.toString(bucket[i]))) {
+            }
+            else if (specialCharacter.contains(Character.toString(bucket[i]))) {
                 c.push(bucket[i]);
-            }else if (bucket[i] == '(') {
-                c.push((bucket[i]));
-            } else if (bucket[i] == ')') {
-                if(c.peek()!='('){
-                    num.push(sum(c.pop(), num.pop(), num.pop()));
-                    c.pop();
-                }
             }
                 while (!c.empty() && num.size()>=2)
                     System.out.println(num.push(sum(c.pop(), num.pop(), num.pop())));
